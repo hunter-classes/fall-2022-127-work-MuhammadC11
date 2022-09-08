@@ -1,9 +1,14 @@
 import turtle
 
-def square(t):
-
+def square(t, x, y, w, color, sidelen):
+# set the location, color, width and side liength
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
   for i in range(4):
-    t.forward(50)
+    t.forward(sidelen)
     t.right(90)
 
 
@@ -16,8 +21,8 @@ squirt.pendown()
 squirt.color("red")
 squirt.width(5)
 
-square(crush)
-square(squirt)
+square(crush, 20, 30, 5, "blue", 100)
+square(squirt , 40, 50, 5, "red", 100)
 wn.exitonclick()
 wn.mainloop()
 
