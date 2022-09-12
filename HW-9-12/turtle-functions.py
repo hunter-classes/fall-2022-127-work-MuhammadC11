@@ -1,43 +1,35 @@
 import turtle
 
-def square(t, x, y, w, color, sidelen):
-# set the location, color, width and side liength ( this comment gets removed once it gets pushed to git)
+def turtle_position(t, x, y, w, color):
   t.penup()
   t.goto(x,y)
   t.width(w)
   t.color(color)
   t.pendown()
+
+
+def square(t, x, y, w, color, sidelen):
+# set the location, color, width and side liength ( this comment gets removed once it gets pushed to git)
+  turtle_position(t,x, y, w, color)
   for i in range(4):
     t.forward(sidelen)
     t.right(90)
 
 
 def triangle(t, x, y, w, color, sidelen):
-  t.penup()
-  t.goto(x,y)
-  t.width(w)
-  t.color(color)
-  t.pendown()
+  turtle_position(t,x, y, w, color)
   for i in range(3):
     t.forward(sidelen)
     t.left(120)
 
 def hexagon(t, x, y, w, color, sidelen):
-  t.penup()
-  t.goto(x,y)
-  t.width(w)
-  t.color(color)
-  t.pendown()
+  turtle_position(t,x, y, w, color)
   for i in range(6):
     t.forward(sidelen)
     t.left(60)
 
 def ngon(t,sides,x,y,color,width,sidelen):
-  t.penup()
-  t.goto(x,y)
-  t.width(width)
-  t.color(color)
-  t.pendown()
+  turtle_position(t,x, y, width, color)
   for i in range(sides):
     t.forward(sidelen)
     t.left(360/sides)
