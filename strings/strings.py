@@ -18,23 +18,23 @@ space_location = s1.find(" ")
 s5 = s1[space_location+1 :]
 print(s5)
 
-def Initialize(name):
+def initialize(name):
   name = input("Input your first and last name ")
   first = name[0].upper() +"."
   space_location = name.find(" ")
-  last = name[space_location+1 :]
-  finalName = first + last
-  print(finalName)
+  last = name[space_location+1 :].capitalize()
+  finalName = first + " " + last
+  return finalName
   
 
-Initialize("Muhammad Chaudhry")
+print(initialize("Muhammad Chaudhry"))
 
 def bondify(name):
   name = input("Input your first and last name")
   space_location = name.find(" ")
-  last = name[space_location+1 :] 
+  last = name[space_location+1].upper() + name[space_location+2 :]
   first = name[0].upper() + name[1:space_location]
   finalName= last +", " + first + " " + last
-  print(finalName)
+  return finalName
 
-bondify("Mo")
+print(bondify("Mo"))
