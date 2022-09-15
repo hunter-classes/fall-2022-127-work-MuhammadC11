@@ -6,7 +6,7 @@ def bondify(name):
   finalName= last +", " + first + " " + last
   return finalName
 
-#print(bondify("Mo"))
+print(bondify("Mo"))
 
 
 """
