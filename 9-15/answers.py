@@ -1,4 +1,6 @@
 #is even function number 7
+#pass is just a placeholder so that a function isnt empty.
+#None means it doesnt exist, also called null in other languages
 def is_even(n):
    number = int(n)
    if number % 2 == 0:

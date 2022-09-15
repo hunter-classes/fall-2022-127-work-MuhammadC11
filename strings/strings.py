@@ -17,3 +17,24 @@ print(s1[0:3])
 space_location = s1.find(" ")
 s5 = s1[space_location+1 :]
 print(s5)
+
+def Initialize(name):
+  name = input("Input your first and last name ")
+  first = name[0].upper() +"."
+  space_location = name.find(" ")
+  last = name[space_location+1 :]
+  finalName = first + last
+  print(finalName)
+  
+
+Initialize("Muhammad Chaudhry")
+
+def bondify(name):
+  name = input("Input your first and last name")
+  space_location = name.find(" ")
+  last = name[space_location+1 :] 
+  first = name[0].upper() + name[1:space_location]
+  finalName= last +", " + first + " " + last
+  print(finalName)
+
+bondify("Mo")
