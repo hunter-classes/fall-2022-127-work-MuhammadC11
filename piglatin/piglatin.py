@@ -35,4 +35,4 @@ def piglatin(word):
         return low[1:] + first_letter + "ay"
 
 
-print(piglatin("ello bruv"))
+print(piglatin("thats not what he said"))
