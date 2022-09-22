@@ -26,7 +26,8 @@ try to also handle upper case words
 
 def piglatin(word):
     low = word.lower()
-
+    # I want to check if the first letter is a vowel and if so, just add "yay" to the end
+    # I want to check if the first letter is a consonant and if so, move it from the start to the end and add "ay"
     if low[0] == "a" or low[0] == "e" or low[0] == "i" or low[0] == "u" or low[0] == "y":
         return low + "yay"
 
