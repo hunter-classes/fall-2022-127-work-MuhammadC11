@@ -18,3 +18,9 @@ i = 0
 while i < 3:
     print(i)
     i += 1
+
+s = "Hello, world!"
+i = 0
+while i < len(s):
+    print(s[i])
+    i += 1
