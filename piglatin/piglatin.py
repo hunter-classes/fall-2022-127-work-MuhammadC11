@@ -28,11 +28,23 @@ def piglatin(word):
     first = word[0]
     # I want to check if the first letter is a vowel and if so, just add "yay" to the end
     # I want to check if the first letter is a consonant and if so, move it from the start to the end and add "ay"
-    if first in 'aeiuo':
-        return word + "yay"
+    length = len(word)
+    if first.isupper():
+        lowerfirst = first.lower()
+        print(lowerfirst)
+        if lowerfirst in 'aeiuo':
+            if word[length - 1] in '!,.?':
+                word = word[0:length - 1] + 'yay' + word[length - 1]
+                return word
+            # if tthe first letter is contained in "aeiuo" then add "yay" to the end
+            return word
 
-    else:
-        return word[1:] + first + "ay"
+        else:
+            if word[length - 1] in '!,.?':
+                word = word[1:length - 1] + \
+                    lowerfirst + "ay" + word[length - 1]
+                newword = word[0].upper() + word[1:]
+                return newword
 
 
-print(piglatin("telashes are weird"))
+print(piglatin("Peanuts!"))
