@@ -10,4 +10,17 @@ def fizzbuzz(n):
             print(i)
 
 
+def fizzbuzz2(n):
+    for i in range(1, n+1):
+        output = ""
+        if i % 3 == 0:
+            output = output + "Fizz"
+        if i % 5 == 0:
+            output = output + "Buzz"
+        if output == "":
+            output = str(i)
+        print(output)
+
+
 fizzbuzz(90)
+fizzbuzz2(90)
