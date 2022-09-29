@@ -47,4 +47,4 @@ def piglatin(word):
                 return newword
 
 
-print(piglatin("Peanuts!"))
+print(piglatin("Basket!"))
