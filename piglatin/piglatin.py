@@ -6,7 +6,7 @@ def bondify(name):
     return finalName
 
 
-print(bondify("Muhammad Chaudhry"))
+
 
 
 """
@@ -47,4 +47,4 @@ def piglatin(word):
                 return newword
 
 
-print(piglatin("Basket!"))
+
