@@ -1,0 +1,46 @@
+import random
+f = open("story.dat", "r")
+n = open("nouns.dat", "r")
+v = open("verbs.dat", "r")
+a = open("adjectives.dat", "r")
+storyData = f.read()  # read the entire file into a string
+nounData = n.read()
+adjectiveData = a.read()
+verbData = v.read()
+nounList = nounData.split()  # split the string into a list of strings
+verbList = verbData.split()
+adjectiveList = adjectiveData.split()
+
+
+def madLib(story, noun, adjective, verb):
+    character = random.choice(noun)
+    story = story.replace("<character>", character)
+    # split the string into a list of strings so that we can iterate through it to find each madlib placeholder.
+    storyData = story.split()
+    for i in storyData:  # for each word in the story
+        if i.find("<noun>") != -1:  # if there is any occurence of the word <noun>
+            storyData[storyData.index(i)] = random.choice(
+                noun)  # replace the word with a random noun
+        elif i.find("<adjective>") != -1:  # if there is any occurence of the word <adjective>
+            storyData[storyData.index(i)] = random.choice(
+                adjective)  # replace the word with a random adjective
+        elif i.find("<verb>") != -1:  # if there is any occurence of the word <verb>
+            storyData[storyData.index(i)] = random.choice(
+                verb)  # replace the word with a random verb
+    return " ".join(storyData)  # join the list of words into a string
+
+
+print(madLib(storyData, nounList, adjectiveList, verbList))
+
+
+# this is my old code that i want to leave here in case i need to reference it later
+# def madLib(story, noun, adjective, verb):
+#     character = random.choice(noun)
+#     numberNoun = story.count("<noun>")
+#     print("there are ", numberNoun, "nouns in the story")
+#     for i in range(numberNoun):
+#         story = story.replace("<noun>", random.choice(noun), 1)
+#     story = story.replace("<character>", character)
+#     story = story.replace("<adjective>", random.choice(adjective))
+#     story = story.replace("<verb>", random.choice(verb))
+#     return story
