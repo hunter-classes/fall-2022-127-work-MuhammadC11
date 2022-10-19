@@ -4,15 +4,19 @@ n = open("nouns.dat", "r")
 v = open("verbs.dat", "r")
 a = open("adjectives.dat", "r")
 storyData = f.read()  # read the entire file into a string
-nounData = n.read()
-adjectiveData = a.read()
-verbData = v.read()
-nounList = nounData.split()  # split the string into a list of strings
+nounData = n.read()  # read the entire file into a string
+adjectiveData = a.read()  # read the entire file into a string
+verbData = v.read()  # read the entire file into a string
+# shoutout to Thomas H. for showing me I needed to split the data into a list of strings
+nounList = nounData.split()
+# shoutout to Thomas H. for showing me I needed to split the data into a list of strings
 verbList = verbData.split()
+# shoutout to Thomas H. for showing me I needed to split the data into a list of strings
 adjectiveList = adjectiveData.split()
 
 
 def madLib(story, noun, adjective, verb):
+    # make character a constant variable chosen at random at the beginning of the function call. This way the character is the same throughout the story.
     character = random.choice(noun)
     story = story.replace("<character>", character)
     # split the string into a list of strings so that we can iterate through it to find each madlib placeholder.
