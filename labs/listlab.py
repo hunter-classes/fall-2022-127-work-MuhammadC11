@@ -1,18 +1,3 @@
-"""
-You can name the functions anything you wish.
-
-
-
-
-
-
-
-
-
-
-chapter 10 # 10, 11, 12
-"""
-
 
 def smallest(lst):
     smallest = lst[0]
