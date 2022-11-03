@@ -1,17 +1,14 @@
-question 	add 	itch
-reach 	allow 	jog
-rinse 	bake 	jump
-run 	bang 	jump
-scatter 	call 	kick
+question 	itch
+reach  	jog 	bake 	jump
+run 	bang 	
+scatter  	kick
 stay 	chase 	knit
-swim 	damage 	land
-talk 	drop 	lock
-turn 	end 	march
-untie 	escape 	mix
-use 	fasten 	name
-vanish 	fix 	notice
-visit 	gather 	obey
-walk 	grab 	open
-work 	hang 	pass
+swim  	
+turn  	march
+untie 	escape 	
+
+vanish 	
+
+walk 	grab 	 	hang 	pass
 yawn 	hug 	pitch
-yell 	imagine 	promise
+yell 	
