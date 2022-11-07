@@ -1,3 +1,6 @@
+import random
+
+
 def findLargest(numbers):
     smallest = numbers[0]
     for number in numbers:
@@ -56,16 +59,21 @@ print("the mode is", mode([4, 6, 67, 8, 9, 9, 10, 11, 12]))
 def fastMode(dataset):
     # assume all values in dataset
     # are between 0 and 99 inclusive
-    tally = [0] * 100
+    largest = findLargest(dataset)
+    tally = [0 for x in range(largest + 1)]
     for value in dataset:
         tally[value] += 1
-    maxCount = 0
-    modeSoFar = 0
-    for i in range(100):
-        if tally[i] > maxCount:
-            maxCount = tally[i]
-            modeSoFar = i
-    return modeSoFar
+    mode_count = findLargest(tally)
+    for i in range(len(tally)):
+        if tally[i] == mode_count:
+            return i
+    # maxCount = 0
+    # modeSoFar = 0
+    # for i in range(100):
+    #     if tally[i] > maxCount:
+    #         maxCount = tally[i]
+    #         modeSoFar = i
+    # return modeSoFar
 
     # make a list of 100 slots
     # and set them all to 0
@@ -77,4 +85,4 @@ def fastMode(dataset):
     # 3. the index with the highest tally is the mode
 
 
-print("the mode is", fastMode([4, 6, 67, 8, 9, 9, 10, 10, 10, 10, 10, 11, 12]))
+print("the mode is", fastMode([random.randrange(100) for i in range(100)]))
