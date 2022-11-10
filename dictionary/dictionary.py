@@ -6,7 +6,7 @@ person = {
 }
 person['age'] = person['age'] + 1
 
-print(person)
+# print(person)
 
 k = person.keys()
 print(k)
@@ -28,12 +28,21 @@ student_list = [s1, s2, s3, s4]
 student_dict = {}
 for item in student_list:
     student_dict[item['name']] = item
-print(student_dict)
+# print(student_dict)
 
 s = """This is a string with a bunch of words in it. This is another sentence. This is the last sentence. how do we get the number of words in this string?"""
 
 # ord() returns the unicode code point for a single character string
 # chr() returns the character for a given unicode code point
+
+translations = """a:b
+b:c
+c:d
+old:new"""
+# for line in translations.split("\n"):
+#     (old, new) = line.split(":")
+#     print(old, "will become", new)
+# you can do .split(":") to split on a specific character in this case ":"
 
 
 def count_letters(s):
@@ -49,7 +58,7 @@ def count_letters(s):
     return counts
 
 
-print(count_letters(s))
+# print(count_letters(s))
 
 
 def count_words(s):
@@ -64,4 +73,4 @@ def count_words(s):
     return counts
 
 
-print(count_words(s))
+# print(count_words(s))
