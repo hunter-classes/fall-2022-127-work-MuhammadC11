@@ -28,7 +28,7 @@ student_list = [s1, s2, s3, s4]
 student_dict = {}
 for item in student_list:
     student_dict[item['name']] = item
-# print(student_dict)
+print(student_dict)
 
 s = """This is a string with a bunch of words in it. This is another sentence. This is the last sentence. how do we get the number of words in this string?"""
 
