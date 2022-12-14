@@ -1,0 +1,1 @@
+I receieved assistance from Thomas H, he clarified that i needed to split the nouns and adjectives dat file into arrays. 
