@@ -19,7 +19,9 @@ int max(int a, int b)
 
 int main()
 {
-    int largest = max(5, 10);
-    std::cout << "the largest number is " << largest << "\n\n";
+    int a = 5;
+    int b = 10;
+    int largest = max(a, b);
+    std::cout << "the largest number between " << a << " and " << b << " is " << largest << "\n";
     return 0;
 }
