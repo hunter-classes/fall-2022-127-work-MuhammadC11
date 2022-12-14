@@ -1,4 +1,5 @@
 // this is just something we include at the start of every program
+// I created a for loop, and an if else statement, these statements are inside one function which is called by the main function.
 #include <iostream>
 
 int max(int a, int b)
